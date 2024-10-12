@@ -1,0 +1,403 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+
+/* Inicio header */
+header {
+  background-color: #000000;
+  padding: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 800;
+  top: 0;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+/* links */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  padding: 15px 20px;
+}
+
+.bar-link {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  flex-grow: 1;
+}
+
+/* icones social */
+.social {
+  display: flex;
+}
+
+.header-social {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.header-point img {
+  width: 25px;
+  height: 25px;
+}
+
+.header-logo-icons img:nth-child(2) {
+  display: none;
+}
+
+.header-logo-icons:hover img:nth-child(2) {
+  display: block;
+}
+
+.header-logo-icons:hover img:nth-child(1) {
+  display: none;
+}
+
+.bar-item {
+  display: flex;
+}
+
+/* txt bar */
+.bar-item a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+  letter-spacing: -1.5px;
+}
+
+.bar-item a:hover {
+  color: #0025ff;
+}
+
+/* caixa dos itens */
+.container-cx {
+  display: grid;
+  grid-template-columns: repeat(3 , 500px);
+  justify-content: center; /* Alinha os itens nas extremidades */
+  width: 100%;
+  align-items: center;
+  margin-top: 170px; /* Espaço acima do container */
+}
+
+.logoori {
+  display: flex;
+  max-width: 200px;
+  padding: 20px;
+  flex-direction: column;
+  margin-left: 220px;
+}
+
+.logoori img {
+  width: 186px; 
+  height: 269px; 
+}
+
+.txtnutri {
+  color: white;
+  padding: 20px;
+  text-align: left;
+  max-width: 400px; /* Largura máxima da caixa de texto */
+  margin-left: 20px; /* Espaço à esquerda */
+}
+
+.txtnutri h2 {
+  font-size: 45px;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+
+.txtnutri-p1 {
+  margin-top: -10px;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.txtnutri h3 {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.txtpp {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-size: 19px;
+  line-height: 150%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.txtnutri h4 {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-size: 21px;
+}
+
+.imgtxt {
+  width: 386px; 
+  height: 169px; 
+}
+
+.txt-table {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-size: 23px;
+  margin: 3px;
+}
+/* texto central */
+/* Inicio table */
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.tabela th, td {
+  border: 1px solid #b8b8b8;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.txt-f {
+  max-width: 400px;
+}
+
+.txt-f p {
+  color: white;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+/* fim table */
+
+/* Titulo pp */
+.txt {
+  color: #ffff;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 200px;
+  letter-spacing: -1.5px;
+}
+
+.produtos-container {
+  display: grid; /* Ativa o grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de igual largura */
+  margin-top: 70px; 
+  margin: 200px;
+}
+
+.produtos-cx:nth-child(4) /* Seleciona o quarto produto e centraliza */ {
+  grid-column: 1 / -1; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.produtos-container {
+  display: grid; 
+  justify-items: center; /* Centraliza os itens dentro da grid */
+}
+
+.produtos-cx {
+  display: flex;
+  text-align: center; 
+  padding: 10px;
+  width: 470px;
+  height: 680px;
+  margin: 5px;
+  flex-direction: column;
+}
+
+.produto-imagem img {
+  width: 186px; 
+  height: 269px; 
+}
+
+.produto-origi {
+  margin-top: 110px;
+}
+
+.titulo-produto {
+  font-size: 40px; /* Tamanho do título */
+  margin: 70px 0; /* Aumentar a margem acima e abaixo do título */
+}
+
+.titulo-produto a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  letter-spacing: -3px;
+  font-family: Arial, sans-serif;
+  
+}
+
+.titulo-produto a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.titulo-produtocf {
+  font-size: 40px;
+  margin: 52px;
+}
+
+.titulo-produtocf a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  letter-spacing: -3px;
+  font-family: Arial, sans-serif;  
+}
+
+.titulo-produtocf a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.descricao-origi {
+  color: white;
+  margin-top: 100px;
+  
+}
+
+.botao-origi .botao {
+  background-color: #0025ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px; /* Bordas arredondadas do botão */
+  text-decoration: none;
+  display: inline-block; /* Permite padding e margens funcionarem corretamente */
+  transition: background-color 0.3s; 
+  margin-top: 50px; /* Margem acima do botão */
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-family: Arial, sans-serif;
+}
+
+.descricao-produto  {
+  color: #ffffff; /* Cor do texto secundário */
+  margin: 15px 0; /* Aumentar a margem acima e abaixo da descrição */
+}
+
+.botao-produto .botao {
+  background-color: #0025ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px; /* Bordas arredondadas do botão */
+  text-decoration: none;
+  display: inline-block; /* Permite padding e margens funcionarem corretamente */
+  transition: background-color 0.3s; 
+  margin-top: 30px; /* Margem acima do botão */
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-family: Arial, sans-serif;
+}
+
+/* Inicio footer */
+/* footer caixa-estilo */
+.footer-cx {
+  height: 280px;
+  border-top: 3px solid #fff;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 30px; /* Espaçamento entre os ícones */
+  list-style: none;
+  margin-right: 40px;
+  justify-content: center;
+}
+
+.footer-point img {
+  width: 22px; /* Tamanho dos ícones */
+  height: 22px;
+}
+
+.bar-footer {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  margin-top: 23px;
+}
+
+/* estilo txt footer */
+.txt-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.txt-footer a:hover {
+  color: #0025ff;
+}
+/* icones social do footer */
+.footer-logo-icons img:nth-child(2) {
+  display: none;
+}
+
+.footer-logo-icons:hover img:nth-child(2) {
+  display: block;
+}
+
+.footer-logo-icons:hover img:nth-child(1) {
+  display: none;
+}
+
+
+/* texto final */
+.txtfim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.txtff {
+  color: #2e3350;
+  font-family: arial, sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+  letter-spacing: -1.5px;
+}
