@@ -324,11 +324,15 @@ td {
   font-family: Arial, sans-serif;
 }
 
-/*começo do footer */
 
+/* Começo do footer */
 .footer-cx {
   height: 280px;
   border-top: 3px solid #fff;
+  width: 100%;
+  /* Largura total */
+  background-color: #000;
+  /* Cor de fundo */
 }
 
 .logo-footer {
@@ -340,12 +344,15 @@ td {
 .footer-social {
   display: flex;
   gap: 30px;
+  /* Espaçamento entre os ícones */
   list-style: none;
+  margin-right: 40px;
   justify-content: center;
 }
 
 .footer-point img {
   width: 22px;
+  /* Tamanho dos ícones */
   height: 22px;
 }
 
@@ -353,11 +360,15 @@ td {
   display: flex;
   justify-content: center;
   gap: 55px;
+  margin-top: 23px;
 }
 
+/* estilo txt footer */
 .txt-footer a {
   color: #fff;
   text-decoration: none;
+  font-family: Arial, sans-serif;
+  letter-spacing: -1.5px;
   font-weight: 900;
   font-size: 17px;
 }
@@ -366,6 +377,7 @@ td {
   color: #0025ff;
 }
 
+/* icones social do footer */
 .footer-logo-icons img:nth-child(2) {
   display: none;
 }
@@ -378,6 +390,8 @@ td {
   display: none;
 }
 
+
+/* texto final */
 .txtfim {
   display: flex;
   align-items: center;
@@ -387,6 +401,7 @@ td {
 
 .txtff {
   color: #2e3350;
+  font-family: arial, sans-serif;
   font-weight: 900;
   font-size: 17px;
   letter-spacing: -1.5px;
@@ -713,12 +728,13 @@ td {
   .produtos-container {
     grid-template-columns: 1fr;
   }
-}
 
-@media screen and (max-width: 442px) {
   .txt {
     font-size: 27px;
   }
+}
+
+@media screen and (max-width: 442px) {
 
   .tabela {
     width: 130px;

@@ -1,13 +1,21 @@
+html,
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
   font-family: Arial, sans-serif;
   background-color: #000000;
+  overflow-x: hidden;
 }
 
 /* Inicio header */
 header {
   background-color: #000000;
-  padding: 0px;
+  padding: 0;
   position: fixed;
   width: 100%;
   z-index: 800;
@@ -74,7 +82,6 @@ header {
   text-decoration: none;
   font-size: 17px;
   font-weight: 900;
-  font-family: Arial, sans-serif;
   letter-spacing: -1.5px;
 }
 
@@ -85,57 +92,48 @@ header {
 /* caixa dos itens */
 .container-cx {
   display: grid;
-  grid-template-columns: repeat(3 , 500px);
-  justify-content: center; /* Alinha os itens nas extremidades */
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   align-items: center;
-  margin-top: 170px; /* Espaço acima do container */
+  margin-top: 170px;
 }
 
 .logoori {
   display: flex;
-  max-width: 200px;
+  max-width: 100%;
   padding: 20px;
   flex-direction: column;
-  margin-left: 220px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 200px;
 }
 
 .logoori img {
-  width: 186px; 
-  height: 269px; 
+  width: 186px;
+  height: 269px;
 }
 
 .txtnutri {
   color: white;
   padding: 20px;
   text-align: left;
-  max-width: 400px; /* Largura máxima da caixa de texto */
-  margin-left: 20px; /* Espaço à esquerda */
+  max-width: 400px;
+  margin-left: 20px;
 }
 
 .txtnutri h2 {
   font-size: 45px;
-  font-family: Arial, sans-serif;
   font-weight: 900;
   letter-spacing: -1.5px;
 }
 
-.txtnutri-p1 {
-  margin-top: -10px;
-  font-family: Arial, sans-serif;
-  font-weight: 900;
-  letter-spacing: -1px;
-}
-
 .txtnutri h3 {
-  font-family: Arial, sans-serif;
   font-weight: 900;
   letter-spacing: -1.5px;
   text-align: center;
 }
 
 .txtpp {
-  font-family: Arial, sans-serif;
   font-weight: 900;
   letter-spacing: -1.5px;
   font-size: 19px;
@@ -145,46 +143,43 @@ header {
 }
 
 .txtnutri h4 {
-  font-family: Arial, sans-serif;
   font-weight: 900;
   letter-spacing: -1.5px;
   font-size: 21px;
 }
 
 .imgtxt {
-  width: 386px; 
-  height: 169px; 
+  width: 386px;
+  height: 169px;
 }
 
 .txt-table {
   color: white;
-  font-family: Arial, sans-serif;
   font-weight: 900;
   letter-spacing: -1.5px;
   font-size: 23px;
   margin: 3px;
 }
+
 /* texto central */
-/* Inicio table */
 table {
   border-collapse: collapse;
   border: 2px solid rgb(140 140 140);
-  font-family: Arial, sans-serif;
   font-weight: 900;
   letter-spacing: 0.5px;
   color: white;
 }
 
-.tabela th, td {
+.tabela th,
+td {
   border: 1px solid #b8b8b8;
-  border-collapse: separate;
-  border-spacing: 0;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    font-size: 15px;
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  font-size: 15px;
 }
 
 .txt-f {
@@ -194,16 +189,13 @@ th, td {
 .txt-f p {
   color: white;
   font-size: 12px;
-  font-family: Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0.7px;
 }
-/* fim table */
 
 /* Titulo pp */
 .txt {
   color: #ffff;
-  font-family: Arial, sans-serif;
   font-weight: 900;
   font-size: 72px;
   text-align: center;
@@ -212,47 +204,28 @@ th, td {
 }
 
 .produtos-container {
-  display: grid; /* Ativa o grid layout */
-  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de igual largura */
-  margin-top: 70px; 
-  margin: 200px;
-}
-
-.produtos-cx:nth-child(4) /* Seleciona o quarto produto e centraliza */ {
-  grid-column: 1 / -1; 
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.produtos-container {
-  display: grid; 
-  justify-items: center; /* Centraliza os itens dentro da grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 5px;
 }
 
 .produtos-cx {
   display: flex;
-  text-align: center; 
+  text-align: center;
   padding: 10px;
-  width: 470px;
   height: 680px;
   margin: 5px;
   flex-direction: column;
 }
 
 .produto-imagem img {
-  width: 186px; 
-  height: 269px; 
-}
-
-.produto-origi {
-  margin-top: 110px;
+  width: 186px;
+  height: 269px;
 }
 
 .titulo-produto {
-  font-size: 40px; /* Tamanho do título */
-  margin: 70px 0; /* Aumentar a margem acima e abaixo do título */
+  font-size: 30px;
+  margin: 20px 0;
 }
 
 .titulo-produto a {
@@ -260,8 +233,6 @@ th, td {
   color: white;
   font-weight: 900;
   letter-spacing: -3px;
-  font-family: Arial, sans-serif;
-  
 }
 
 .titulo-produto a:hover {
@@ -269,68 +240,122 @@ th, td {
   color: white;
 }
 
-.titulo-produtocf {
-  font-size: 40px;
-  margin: 52px;
-}
 
-.titulo-produtocf a {
+/*Configuração dos botoes e estilos */
+.botao-produto .botao,
+.botao-origi .botao {
+  background-color: #0025ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
   text-decoration: none;
-  color: white;
+  display: inline-block;
+  transition: background-color 0.3s;
   font-weight: 900;
-  letter-spacing: -3px;
-  font-family: Arial, sans-serif;  
+  letter-spacing: -1.5px;
 }
 
-.titulo-produtocf a:hover {
-  text-decoration: underline;
+.descricao-produtoli {
   color: white;
+  margin-top: 43px;
+  font-size: 15px;
+}
+
+.descricao-produtozero {
+  color: white;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.descricao-produtocf {
+  color: white;
+  margin-top: 40px;
+  font-size: 15px;
 }
 
 .descricao-origi {
   color: white;
-  margin-top: 100px;
-  
+  margin-top: 74px;
+
+}
+
+.botao-produtoli .botao {
+  background-color: #0025ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* Bordas arredondadas do botão */
+  text-decoration: none;
+  display: inline-block;
+  /* Permite padding e margens funcionarem corretamente */
+  transition: background-color 0.3s;
+  margin-top: 48px;
+  /* Margem acima do botão */
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-family: Arial, sans-serif;
+}
+
+.botao-produtozero .botao {
+  background-color: #0025ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* Bordas arredondadas do botão */
+  text-decoration: none;
+  display: inline-block;
+  /* Permite padding e margens funcionarem corretamente */
+  transition: background-color 0.3s;
+  margin-top: 50px;
+  /* Margem acima do botão */
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-family: Arial, sans-serif;
+}
+
+.botao-produtocf .botao {
+  background-color: #0025ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* Bordas arredondadas do botão */
+  text-decoration: none;
+  display: inline-block;
+  /* Permite padding e margens funcionarem corretamente */
+  transition: background-color 0.3s;
+  margin-top: 50px;
+  /* Margem acima do botão */
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  font-family: Arial, sans-serif;
 }
 
 .botao-origi .botao {
   background-color: #0025ff;
   color: #ffffff;
   padding: 10px 20px;
-  border-radius: 20px; /* Bordas arredondadas do botão */
+  border-radius: 20px;
+  /* Bordas arredondadas do botão */
   text-decoration: none;
-  display: inline-block; /* Permite padding e margens funcionarem corretamente */
-  transition: background-color 0.3s; 
-  margin-top: 50px; /* Margem acima do botão */
+  display: inline-block;
+  /* Permite padding e margens funcionarem corretamente */
+  transition: background-color 0.3s;
+  margin-top: 61px;
+  /* Margem acima do botão */
   font-weight: 900;
   letter-spacing: -1.5px;
   font-family: Arial, sans-serif;
 }
 
-.descricao-produto  {
-  color: #ffffff; /* Cor do texto secundário */
-  margin: 15px 0; /* Aumentar a margem acima e abaixo da descrição */
-}
+/*começo do footer */
 
-.botao-produto .botao {
-  background-color: #0025ff;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 20px; /* Bordas arredondadas do botão */
-  text-decoration: none;
-  display: inline-block; /* Permite padding e margens funcionarem corretamente */
-  transition: background-color 0.3s; 
-  margin-top: 30px; /* Margem acima do botão */
-  font-weight: 900;
-  letter-spacing: -1.5px;
-  font-family: Arial, sans-serif;
-}
-
-/* Inicio footer */
-/* footer caixa-estilo */
 .footer-cx {
   height: 280px;
   border-top: 3px solid #fff;
+  width: 100%;
+  /* Largura total */
+  background-color: #000;
+  /* Cor de fundo */
 }
 
 .logo-footer {
@@ -341,14 +366,16 @@ th, td {
 
 .footer-social {
   display: flex;
-  gap: 30px; /* Espaçamento entre os ícones */
+  gap: 30px;
+  /* Espaçamento entre os ícones */
   list-style: none;
   margin-right: 40px;
   justify-content: center;
 }
 
 .footer-point img {
-  width: 22px; /* Tamanho dos ícones */
+  width: 22px;
+  /* Tamanho dos ícones */
   height: 22px;
 }
 
@@ -372,6 +399,7 @@ th, td {
 .txt-footer a:hover {
   color: #0025ff;
 }
+
 /* icones social do footer */
 .footer-logo-icons img:nth-child(2) {
   display: none;
@@ -400,4 +428,347 @@ th, td {
   font-weight: 900;
   font-size: 17px;
   letter-spacing: -1.5px;
+}
+
+@media screen and (max-width: 1442px) {
+  .descricao-origi {
+    margin-top: 111px;
+  }
+
+  .descricao-produtozero {
+    margin-top: 81px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .container-cx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 170px;
+  }
+
+  .logoori {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .txtnutri {
+    text-align: center;
+    text-transform: none;
+    margin-top: -50px;
+    max-width: 1200px;
+  }
+
+  .txtpp {
+    text-align: center;
+  }
+
+  .txt-table {
+    text-align: center;
+  }
+
+  .txt-f {
+    text-align: center;
+    margin: auto;
+  }
+
+  .txt {
+    margin-top: -50px;
+  }
+
+  .imgtxt {
+    margin-left: 290px;
+  }
+}
+
+@media screen and (max-width: 1162px) {
+  .botao-produtocf {
+    margin-top: -18px;
+  }
+}
+
+@media screen and (max-width: 1096px) {
+  .footer-cx {
+    margin-top: -10px;
+  }
+
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 30px;
+    /* Espaçamento entre os ícones */
+    list-style: none;
+    margin-right: 40px;
+    justify-content: center;
+  }
+
+  .footer-point img {
+    width: 22px;
+    /* Tamanho dos ícones */
+    height: 22px;
+  }
+
+  .bar-footer {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    margin-top: 23px;
+    margin: 0 60px;
+  }
+
+  /* estilo txt footer */
+  .txt-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    letter-spacing: -1.5px;
+    font-weight: 900;
+    font-size: 17px;
+  }
+
+  .txt-footer {
+    text-align: center;
+  }
+
+  .txt-footer a:hover {
+    color: #0025ff;
+  }
+
+}
+
+@media screen and (max-width: 1030px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1018px) {
+  .produtos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .produtos-cx {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produtos-cx:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .txt {
+    margin-top: 20px;
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 30px;
+    /* Espaçamento entre os ícones */
+    list-style: none;
+    margin-right: 40px;
+    justify-content: center;
+  }
+
+  .footer-point img {
+    width: 22px;
+    /* Tamanho dos ícones */
+    height: 22px;
+  }
+
+  .bar-footer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 23px;
+    margin: 0 60px;
+    flex-direction: column;
+  }
+
+  /* estilo txt footer */
+  .txt-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    letter-spacing: -1.5px;
+    font-weight: 900;
+    font-size: 17px;
+  }
+
+  .txt-footer {
+    text-align: center;
+  }
+
+  .txt-footer a:hover {
+    color: #0025ff;
+  }
+
+}
+
+@media screen and (max-width: 890px) {
+  .bar-item a {
+    font-size: 16px;
+  }
+
+  .bar-link {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-grow: 1;
+    /* Permite que os links ocupem o espaço disponível */
+  }
+
+  .header-point img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .header-social {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin-right: 20px;
+  }
+}
+
+
+@media screen and (max-width: 778px) {
+  .txt {
+    margin-top: 20px;
+    font-size: 50px;
+  }
+
+  .produtos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 200px 0 -70px 0;
+  }
+
+  .produtos-cx {
+    margin: -102px 0 -10px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .txt {
+    font-size: 27px;
+  }
+
+  .tabela {
+    width: 130px;
+    margin: 0 0 0 25px;
+  }
+
+  .imgtxt {
+    margin: 0;
+    width: 220px;
+    height: 120px;
+  }
+
+  .imgtxt {
+    margin-left: 160px;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .bar-item a {
+    font-size: 16px;
+  }
+
+  .bar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  .header-point img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-social {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin-right: 20px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 642px) {
+  .txt {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  .txt {
+    font-size: 27px;
+  }
+
+  .tabela {
+    width: 130px;
+  }
+
+  .imgtxt {
+    margin: 0;
+    width: 220px;
+    height: 120px;
+  }
+
+  .imgtxt {
+    margin-left: 150px;
+  }
+}
+
+
+@media screen and (max-width: 412px) {
+  .tabela {
+    width: 130px;
+  }
+
+  .txtnutri {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .txtpp {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .tabela {
+    width: 103px;
+  }
+
+  .txtpp {
+    font-size: 12px;
+  }
 }
